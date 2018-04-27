@@ -1,0 +1,7 @@
+version: '2'
+services:
+  php:
+    build: .
+    command: ./run.sh
+    volumes:
+      - .:/usr/app/

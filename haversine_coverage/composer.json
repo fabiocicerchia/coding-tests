@@ -1,0 +1,7 @@
+{
+    "name": "fabiocicerchia/s24-test3",
+    "description": "Third Coding Test for S24",
+    "require": {
+        "php": "^7.2"
+    }
+}
