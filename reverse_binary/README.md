@@ -30,7 +30,7 @@ Although, it is enough just to run the last command.
 npm install
 npm run build
 npm test
-node lib/reverse_binary.js
+node reverse_binary.js
 ```
 
 ## Additional information

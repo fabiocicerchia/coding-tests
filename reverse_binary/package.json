@@ -12,11 +12,14 @@
   "author": "Fabio Cicerchia",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-env": "^7.8.6",
     "babel-cli": "^6.26.0",
-    "babel-jest": "^22.4.3",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.4.0",
-    "jest": "^22.4.3"
+    "babel-jest": "^22.4.4",
+    "babel-preset-minify": "^0.4.3",
+    "jest": "^25.1.0"
+  },
+  "devDependencies": {
+    "braces": ">=2.3.1"
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src -d lib",
