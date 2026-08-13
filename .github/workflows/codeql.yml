@@ -1,0 +1,41 @@
+name: codeql
+
+# This repo had no workflows at all, so nothing was scanning it. CodeQL only
+# needs the source, so it stands alone here rather than waiting on a CI setup.
+#
+# The C++ under hacker-rank/ is left out on purpose: CodeQL has to compile
+# c-cpp, and these are loose translation units with no build system, so
+# autobuild would fail the job rather than report anything. Adding it needs a
+# build command first.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, catches newly published queries
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  codeql:
+    name: codeql
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write # upload SARIF to the Security tab
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript-typescript, python]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: github/codeql-action/init@5595ccaf912efad79be6eef63a5619ff05969be3  # v4.37.6
+        with:
+          languages: ${{ matrix.language }}
+      - uses: github/codeql-action/analyze@5595ccaf912efad79be6eef63a5619ff05969be3  # v4.37.6
