@@ -57,7 +57,7 @@ def TestWithUniqueValues():
     assert result == expected_result
 
 
-def TestiWithExactyTwoDifferentMinimums():
+def TestiWithExactlyTwoDifferentMinimums():
     seq = TestDataExactlyTwoDifferentMinimums.get_array()
     assert len(seq) >= 2
     tmp = sorted(seq)
@@ -69,5 +69,5 @@ def TestiWithExactyTwoDifferentMinimums():
 
 TestWithEmptyArray()
 TestWithUniqueValues()
-TestiWithExactyTwoDifferentMinimums()
+TestiWithExactlyTwoDifferentMinimums()
 print("OK")

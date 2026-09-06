@@ -1,0 +1,5 @@
+# The boarding-pass-sorter brief is the original Italian text from the company
+# that set it — "una serie di carte d'imbarco" is Italian, not a misspelling of
+# "series", and the brief is kept verbatim.
+[default.extend-words]
+serie = "serie"

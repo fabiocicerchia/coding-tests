@@ -62,7 +62,7 @@ foreach ($shoppers as &$shopper) {
     }
 }
 
-// Since the spaceship operator orders ascending, by multipling by -1 I get a reversed sorting.
+// Since the spaceship operator orders ascending, by multiplying by -1 I get a reversed sorting.
 usort($sorted, function ($a, $b) {
     return ($a['coverage'] <=> $b['coverage']) * -1;
 });

@@ -8,7 +8,7 @@ function isNumeric(value) {
 }
 
 /**
- * Convert first a number to its binary representation, then it reverse it and trasnform it again to decimal value.
+ * Convert first a number to its binary representation, then it reverse it and transform it again to decimal value.
  * There are 2 caveats:
  *  - it must be a numeric representation
  *  - it must be positive

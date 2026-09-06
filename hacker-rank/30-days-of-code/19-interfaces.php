@@ -25,7 +25,7 @@ class Calculator implements AdvancedArithmetic
 
 $n=intval(fgets(STDIN));
 $myCalculator=new Calculator();
-if ($myCalculator instanceof AdvancedArithmetic) {//checking if Calculator has implemented AdvancedArithemtic
+if ($myCalculator instanceof AdvancedArithmetic) {//checking if Calculator has implemented AdvancedArithmetic
     $sum=$myCalculator->divisorSum($n);
     echo "I implemented: AdvancedArithmetic\n".$sum;
 } else {

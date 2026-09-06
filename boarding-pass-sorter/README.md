@@ -81,7 +81,7 @@ or
 
 ## TODO
 
- - Improve the performances of the sorting algorythm, currently O(n<sup>2</sup>/2)
+ - Improve the performances of the sorting algorithm, currently O(n<sup>2</sup>/2)
  - Add Silex as REST endpoint to query the library
  - Improve the Describer classes
  - Add i18n
