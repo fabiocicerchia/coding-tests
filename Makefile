@@ -48,9 +48,8 @@ setup: ## Not applicable — each exercise sets itself up
 	@echo "Nothing to set up at the top level: run 'make install EXERCISE=...'"
 	@echo "for the one you are looking at. See README > Not applicable."
 
-lint: ## Not applicable — no linter is configured here
-	@echo "No linter: these are interview exercises kept as they were submitted."
-	@echo "See README > Not applicable."
+lint: ## Run the whole gate — every hook, every file
+	pre-commit run --all-files
 
 format: ## Not applicable — the code is kept as it was submitted
 	@echo "No formatter: reformatting would rewrite the submissions themselves."
