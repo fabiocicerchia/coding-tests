@@ -39,7 +39,7 @@ class StackTest extends \PHPUnit_Framework_TestCase
     {
         $departureAddress = $this->getRandomAddress();
         $arrivalAddress   = $this->getRandomAddress();
-        
+
         $origin = new Departure(
             $departureAddress,
             DateTime::fromNative(2016, 'January', 1, 15, 0, 0),
@@ -64,7 +64,7 @@ class StackTest extends \PHPUnit_Framework_TestCase
     {
         $departureAddress = $this->getRandomAddress();
         $arrivalAddress   = $this->getRandomAddress();
-        
+
         $origin = new Departure(
             $departureAddress,
             DateTime::fromNative(2016, 'January', 1, 15, 0, 0),
@@ -90,7 +90,7 @@ class StackTest extends \PHPUnit_Framework_TestCase
     {
         $departureAddress = $this->getRandomAddress();
         $arrivalAddress   = $this->getRandomAddress();
-        
+
         $origin = new Departure(
             $departureAddress,
             DateTime::fromNative(2016, 'January', 1, 15, 0, 0),

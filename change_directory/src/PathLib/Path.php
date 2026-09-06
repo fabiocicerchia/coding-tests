@@ -28,20 +28,20 @@ class Path
         $oldPathLevels = explode(self::DIR_SEP, $this->currentPath);
 
         $backwardsLevels = count(preg_grep('/^\.\.$/', $newPathLevels));
-        $oldPathLength = count($oldPathLevels);        
+        $oldPathLength = count($oldPathLevels);
 
         $finalPath = [];
-        
+
         for($i = 0; $i < ($oldPathLength - $backwardsLevels); $i++) {
             $finalPath[] = $oldPathLevels[$i];
         }
-        
-        $newPathLength = count($newPathLevels);        
+
+        $newPathLength = count($newPathLevels);
         for ($i = 0; $i < $newPathLength; $i++) {
             if ($newPathLevels[$i] != '..' && !empty($newPathLevels[$i])) {
                 $finalPath[] = $newPathLevels[$i];
             }
-        } 
+        }
 
         $finalPath = implode(self::DIR_SEP, $finalPath) ?: self::DIR_SEP;
         $this->currentPath = $finalPath;

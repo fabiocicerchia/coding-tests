@@ -27,7 +27,7 @@ class Route
      * @return string
      */
     public function __toString() : string
-    {        
+    {
         $legs = [];
         foreach ($this->route->getLegs() as $leg) {
             array_unshift($legs, new PassDescriber($leg));

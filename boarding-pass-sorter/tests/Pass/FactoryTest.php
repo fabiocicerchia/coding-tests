@@ -42,7 +42,7 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
                 'note' => 'Possible strike action',
             ],
         ]);
-        
+
         $this->assertInstanceOf('BoardingPassSorter\\Pass', $pass);
         $this->assertInstanceOf('BoardingPassSorter\\Point\\Departure', $pass->getOrigin());
         $this->assertInstanceOf('BoardingPassSorter\\Point\\Arrival', $pass->getDestination());

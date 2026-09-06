@@ -14,7 +14,7 @@ Suppose you have:
    {'id': 1001, 'zip_code': '37121', 'lat': 45.44, 'lng': 10.99},
    {'id': 1001, 'zip_code': '37129', 'lat': 45.44, 'lng': 11.00},
    {'id': 1001, 'zip_code': '37133', 'lat': 45.43, 'lng': 11.02},
-   ... 
+   ...
 ];
 ```
  * an array of shoppers:
@@ -68,4 +68,3 @@ php haversine_coverage.php
 ## Additional information
 
 For this test I've chosen a quick & dirty approach.
-

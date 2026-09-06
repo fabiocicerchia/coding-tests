@@ -50,7 +50,7 @@ class Pass implements PassInterface
         if ($origin->getTime()->toNativeDateTime() > $destination->getTime()->toNativeDateTime()) {
             throw new \InvalidArgumentException('The departure date cannot be after the arrival date');
         }
-        
+
         $this->origin      = $origin;
         $this->destination = $destination;
         $this->vehicle     = $vehicle;
